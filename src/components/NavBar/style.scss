@@ -1,0 +1,59 @@
+body,
+ul,li,p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+
+}
+a{
+    text-decoration: none;
+    color:aliceblue
+}
+.icon{
+    max-width: 125px;
+    max-height: 75px;
+    width: auto;
+    height: auto;
+    border-radius: 3px;
+
+
+}
+.navbar{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 4rem;
+    padding:15px
+}
+
+.menu{
+    color:white;
+    display: flex;
+}
+.menu li{
+    margin-left: 10px;
+    padding: 10px;
+    background-color: rgb(248, 123, 51);
+    border-radius: 10px;
+}
+
+
+.busca{
+    padding: 10px;
+    border-radius: 5px;
+    width: 15rem;
+
+}
+@media screen and (max-width: 600px){
+    .busca{
+
+        display: none;
+    }
+
+}
+    
+
