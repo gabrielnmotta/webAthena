@@ -1,5 +1,4 @@
 import { Divider } from "@mui/material";
-import * as React from "react";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import MapIcon from "@mui/icons-material/Map";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
