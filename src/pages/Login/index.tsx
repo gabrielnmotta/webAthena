@@ -10,7 +10,7 @@ export function Login() {
     const navigate = useNavigate();
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
-    const [authing, setAuthing] = useState(false);
+    const [ , setAuthing] = useState(false);
 
   
     const login = async () => {
