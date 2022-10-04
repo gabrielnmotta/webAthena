@@ -6,7 +6,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import HelpIcon from "@mui/icons-material/Help";
 import InfoIcon from "@mui/icons-material/Info";
 import LogoutIcon from "@mui/icons-material/Logout";
-import GroupIcon from '@mui/icons-material/Group';
+import GroupIcon from "@mui/icons-material/Group";
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 
@@ -17,41 +17,57 @@ export function Sidebar() {
         <ul>
           <div className="main">
             <li>
-              <DashboardIcon className="icon" />
+              <div className="icon">
+                <DashboardIcon />
+              </div>
               <span role="button">Dashboard</span>
             </li>
             <li>
-              <BarChartIcon className="icon" />
+              <div className="icon">
+                <BarChartIcon />
+              </div>
               <span role="button">Statistics</span>
             </li>
             <li>
-              <MapIcon className="icon" />
+              <div className="icon">
+                <MapIcon />
+              </div>
               <span role="button">Maps</span>
             </li>
           </div>
           <Divider />
           <div className="users">
             <li>
-              <GroupIcon className="icon" />
+              <div className="icon">
+                <GroupIcon />
+              </div>
               <span role="button">Users</span>
             </li>
             <li>
-              <AccountCircleIcon className="icon" />
+              <div className="icon">
+                <AccountCircleIcon />
+              </div>
               <span>Profile</span>
             </li>
           </div>
           <Divider />
           <div className="settings">
             <li>
-              <HelpIcon className="icon" />
+              <div className="icon">
+                <HelpIcon />
+              </div>
               <span>Help</span>
             </li>
             <li>
-              <InfoIcon className="icon" />
+              <div className="icon">
+                <InfoIcon />
+              </div>
               <span>Information</span>
             </li>
             <li>
-              <LogoutIcon className="icon" />
+              <div className="icon">
+                <LogoutIcon />
+              </div>
               <span role="button">Logout</span>
             </li>
           </div>
