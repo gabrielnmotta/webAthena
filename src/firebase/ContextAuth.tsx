@@ -1,7 +1,6 @@
 import axios from "axios";
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { auth } from "./firebaseConfig";
 
 type CustomerContextData = {
@@ -20,7 +19,6 @@ export const CustomerContext = createContext<CustomerContextData>({} as Customer
 type IProps = { children: React.ReactNode  };
 
 export const CustomerProvider: React.FC<IProps> = ({ children }) => {
-    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [user, setUser] = useState({});
@@ -34,7 +32,6 @@ export const CustomerProvider: React.FC<IProps> = ({ children }) => {
                         Authorization: token,
                     }
                 }).then((response) => {
-                    navigate("/home");
                     console.log(response.data, "Deu bom o login");
 
                 }).catch((error) => {
