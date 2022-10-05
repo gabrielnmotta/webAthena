@@ -19,12 +19,11 @@ export function Login() {
         }
       });
       return () => AuthCheck();
-    }, [setUser]);
+    }, [navigate, setUser]);
 
   const Logiin = useCallback((e:any) => {
       e.preventDefault();
       Auth(email, password);
-  
   }, [Auth, email, password]);
   
   
