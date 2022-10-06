@@ -5,6 +5,7 @@ import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";
 import { CustomerProvider } from "../firebase/ContextAuth";
 import PrivateRoute from "./privateRouter";
+import { Dash } from "../components/Dash";
 // import PrivateRoute from "./privateRouter";
 
 
@@ -15,7 +16,9 @@ function Router() {
         <Provider store={store}>
           <Routes>
             <Route path="/" element={<Login />} />
-            <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
+            <Route path="/home" element={<Dash/>} >
+              <Route index element={<PrivateRoute><Home /></PrivateRoute>}/>
+            </Route>
           </Routes>
         </Provider>
       </CustomerProvider>
