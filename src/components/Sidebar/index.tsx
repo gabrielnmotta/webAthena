@@ -1,11 +1,9 @@
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import GroupIcon from "@mui/icons-material/Group";
-import HelpIcon from "@mui/icons-material/Help";
-import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import MapIcon from "@mui/icons-material/Map";
+import SettingsIcon from "@mui/icons-material/Settings";
 import { Divider } from "@mui/material";
 import { signOut } from "firebase/auth";
 import { useCallback } from "react";
@@ -69,3 +67,4 @@ export function Sidebar() {
     </div>
   );
 }
+
