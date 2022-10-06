@@ -27,52 +27,35 @@ export function Sidebar() {
         <ul>
           <div className="main">
             <li>
-              <div className="icon">
-                <DashboardIcon />
-              </div>
+              <DashboardIcon className="icon" />
               <span role="button">Dashboard</span>
             </li>
+
             <li>
-              <div className="icon">
-                <BarChartIcon />
-              </div>
+              <BarChartIcon className="icon" />
               <span role="button">Statistics</span>
             </li>
+
             <li>
-              <div className="icon">
-                <MapIcon />
-              </div>
+              <MapIcon className="icon" />
               <span role="button">Maps</span>
             </li>
           </div>
+
           <Divider />
+
           <div className="users">
             <li>
-              <div className="icon">
-                <GroupIcon />
-              </div>
+              <GroupIcon className="icon" />
               <span role="button">Users</span>
             </li>
-            <li>
-              <div className="icon">
-                <AccountCircleIcon />
-              </div>
-              <span>Profile</span>
-            </li>
           </div>
+
           <Divider />
           <div className="settings">
             <li>
-              <div className="icon">
-                <HelpIcon />
-              </div>
-              <span>Help</span>
-            </li>
-            <li>
-              <div className="icon">
-                <InfoIcon />
-              </div>
-              <span>Information</span>
+              <SettingsIcon className="icon"/>
+              <span role="button">Settings</span>
             </li>
             <li>
               <div className="icon">
