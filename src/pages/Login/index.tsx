@@ -1,27 +1,32 @@
-import React, { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../config/config";
+import { onAuthStateChanged } from "firebase/auth";
+import { useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./login.scss";
 import Logo from "../../assets/Logo/Fundo.png";
+import { auth } from "../../config/config";
+import { useCustomerProvider } from "../../firebase/ContextAuth";
+import "./login.scss";
+
 
 export function Login() {
+  
+  const { email, password, setEmail, setPassword, setUser, Auth } = useCustomerProvider();
   const navigate = useNavigate();
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
-  const [, setAuthing] = useState(false);
+  useEffect(() => {
+      const AuthCheck = onAuthStateChanged(auth, (user) => {
+        if (user) {
+          setUser(true);
+          navigate("/home");
+        }
+      });
+      return () => AuthCheck();
+    }, [navigate, setUser]);
 
-  const login = async () => {
-    try {
-      await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
-      setAuthing(true);
-
-      navigate("/home");
-    } catch (error) {
-      console.log("unauthorized");
-      setAuthing(false);
-    }
-  };
+  const Logiin = useCallback((e:any) => {
+      e.preventDefault();
+      Auth(email, password);
+  }, [Auth, email, password]);
+  
+  
 
   return (
     <div className="content">
@@ -34,20 +39,22 @@ export function Login() {
           className="input-value"
           type="text"
           placeholder="Digite seu e-mail"
-          onChange={(e) => setLoginEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         <input
           className="input-value"
           type="password"
           placeholder="Digite sua senha"
-          onChange={(e) => setLoginPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button className="loginButton" onClick={login}>
+        <button className="loginButton" onClick={Logiin}>
           Login
         </button>
       </div>
     </div>
   );
 }
+
+
