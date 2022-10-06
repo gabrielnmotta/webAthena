@@ -1,62 +1,70 @@
 import BarChartIcon from "@mui/icons-material/BarChart";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import GroupIcon from "@mui/icons-material/Group";
+import LogoutIcon from "@mui/icons-material/Logout";
 import MapIcon from "@mui/icons-material/Map";
 import SettingsIcon from "@mui/icons-material/Settings";
-import LogoutIcon from "@mui/icons-material/Logout";
-import GroupIcon from "@mui/icons-material/Group";
+import { Divider } from "@mui/material";
+import { signOut } from "firebase/auth";
+import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../../firebase/firebaseConfig";
 import "./sidebar.scss";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import Logo from '../../assets/Logo/ZeusAgro.jpeg'
 
 export function Sidebar() {
+  const navigate = useNavigate();
+  const SignOut = useCallback(() => {
+  signOut(auth)
+  navigate("/");
+  console.log("aperte");
+  }, [navigate]);
+
   return (
-    
-        <div className="sidebar">
-          <div className="top">
-                <img src={Logo} alt="logo zeus" className="logo"/>
+    <div className="sidebar">
+      <div className="center">
+        <ul>
+          <div className="main">
+            <li>
+              <DashboardIcon className="icon" />
+              <span role="button">Dashboard</span>
+            </li>
+
+            <li>
+              <BarChartIcon className="icon" />
+              <span role="button">Statistics</span>
+            </li>
+
+            <li>
+              <MapIcon className="icon" />
+              <span role="button">Maps</span>
+            </li>
           </div>
-          
-          <div className="center">
-            <ul>
-              <div className="main">
-                <li>
-                  <DashboardIcon className="icon" />
-                  <span role="button">Dashboard</span>
-                </li>
-  
-                <li>
-                  <BarChartIcon className="icon" />
-                  <span role="button">Statistics</span>
-                </li>
-  
-                <li>
-                  <MapIcon className="icon" />
-                  <span role="button">Maps</span>
-                </li>
-              </div>
-  
-              
-  
-              <div className="users">
-                <li>
-                  <GroupIcon className="icon" />
-                  <span role="button">Users</span>
-                </li>
-              </div>
-  
-              
-              <div className="settings">
-                <li>
-                  <SettingsIcon className="icon" />
-                  <span role="button">Settings</span>
-                </li>
-                <li>
-                  <LogoutIcon className="icon" />
-                  <span role="button">Logout</span>
-                </li>
-              </div>
-            </ul>
+
+          <Divider />
+
+          <div className="users">
+            <li>
+              <GroupIcon className="icon" />
+              <span role="button">Users</span>
+            </li>
           </div>
-        </div>
-     
+
+          <Divider />
+          <div className="settings">
+            <li>
+              <SettingsIcon className="icon"/>
+              <span role="button">Settings</span>
+            </li>
+            <li>
+              <div className="icon">
+                <LogoutIcon />
+              </div>
+              <span onClick={SignOut}role="button">Logout</span>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
   );
 }
+
