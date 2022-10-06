@@ -1,25 +1,27 @@
 button{
     border: none;
     background: none;
+    font-family: Roboto;
 }
 
 .sidebar{
-    flex: 1;
-    border-right: 0.5px solid rgb(230, 227, 227);
+    flex: 1.25;
+    border-right: 0.5px solid #333333;
     min-height: 100vh;
-    background-color: black;
+    background-color: #333333;
 
     .top{
-        height: 50px;
+        height: 65px;
+        padding-top: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
 
         .logo{
-            margin-top: 25px;
             width: auto;
-            height: 125%;
-            cursor: pointer;;
+            height: 3.5rem;
+            cursor: pointer;
+            border-radius: 10px;
         }
     }
 
@@ -53,36 +55,8 @@ button{
                     font-weight: 600;
                     color: #aaaaaa;
                     margin-left: 10px;
-                    font-family: Roboto;
                 }
             }
         }
     }
-
-    .bottom{
-        display: flex;
-        align-items: center;
-        margin: 10px;
-
-        .colorOption{
-            width: 20px;
-            height: 20px;
-            border-radius: 5px;
-            border: 1px solid #7451f8;
-            cursor: pointer;
-            margin: 5px;
-
-            &:nth-child(1){
-                background-color: whitesmoke;
-            }
-
-            &:nth-child(2){
-                background-color: rgb(114, 114, 114);
-            }
-
-            &:nth-child(3){
-                background-color: rgb(0, 0, 0);
-            }
-        }
-    }
-}
+} 
