@@ -3,6 +3,10 @@ button{
     background: none;
     font-family: Roboto;
 }
+.NavLink{                    font-size: 13px;
+    font-weight: 600;
+    color: #aaaaaa;
+    margin-left: 10px;}
 
 .sidebar{
     flex: 1.25;
@@ -24,7 +28,12 @@ button{
             border-radius: 10px;
         }
     }
-
+    .font{
+        font-size: 13px;
+        font-weight: 600;
+        color: #aaaaaa;
+        margin-left: 10px;
+    }
 
     .center{
         padding-left: 10px;
@@ -50,7 +59,8 @@ button{
                     color: #aaaaaa;
                 }
 
-                span {
+                span, a {
+                    text-decoration: none;
                     font-size: 13px;
                     font-weight: 600;
                     color: #aaaaaa;

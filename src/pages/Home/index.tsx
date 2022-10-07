@@ -2,6 +2,7 @@ import './home.scss'
 import { Navbar } from "../../components/NavBar/Nav";
 import { Sidebar } from "../../components/Sidebar/index";
 import { Widgets } from '../../components/Widgets'
+import { Usuarios } from '../Usuarios';
 
 export function Home() {
   return (
@@ -14,7 +15,7 @@ export function Home() {
           <Widgets />
         </div>
         <div className="charts">
-          <h3 className="teste2">asdjlkhasdjhkasd</h3>
+          <Usuarios/>
         </div>
 
       </div>
