@@ -8,7 +8,7 @@ export const NewUser = () => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const save = () => {
-        axios.post('http://localhost:3000/users', {
+        axios.post('http://localhost:7010/users', {
             displayName,
             email,
             phone,

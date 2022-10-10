@@ -1,12 +1,13 @@
-import "./cards.scss";
+import "./maps.scss";
 import IBlocks from "../../interfaces/IBlocks";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useCallback } from "react";
-import Blockx from "./Cardset";
+import { useNavigate } from "react-router-dom";
+import Mapset from "./Mapset";
 import { Button } from "@mui/material";
 
-export function Cards() {
+export function Maps() {
   const [blocks, setBlocks] = useState<IBlocks[]>([]);
   const [bloco, setBloco] = useState<IBlocks[]>([]);
 
@@ -30,6 +31,7 @@ export function Cards() {
     [blocks]
   );
 
+  
 
   const back = useCallback(() => {
     bloco.forEach((item) => {
@@ -54,7 +56,7 @@ export function Cards() {
           onClick={() => test(blocks.blockId, blocks.name)}
           className="title"
         >
-          <Blockx
+          <Mapset
             blockId={blocks.blockId}
             name={blocks.name}
             abrv={""}
@@ -71,6 +73,7 @@ export function Cards() {
           />
         </button>
       ))}
+      
     </div>
   );
 }
