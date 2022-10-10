@@ -7,7 +7,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import { Divider } from "@mui/material";
 import { signOut } from "firebase/auth";
 import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase/firebaseConfig";
 import Logo from '../../assets/Logo/ZeusAgro.jpeg'
 import "./sidebar.scss";
@@ -49,8 +49,9 @@ export function Sidebar() {
 
           <div className="users">
             <li>
+
               <GroupIcon className="icon" />
-              <span role="button">Users</span>
+              <NavLink  to="/user">Users</NavLink>
             </li>
           </div>
 
