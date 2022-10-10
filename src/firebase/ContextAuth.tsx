@@ -11,7 +11,7 @@ type CustomerContextData = {
     setEmail: (email: string) => void;
     setUser: (user: boolean) => void;
     setPassword: (password: string) => void;
-
+    
 }
 
 export const CustomerContext = createContext<CustomerContextData>({} as CustomerContextData);

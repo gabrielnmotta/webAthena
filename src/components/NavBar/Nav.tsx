@@ -2,7 +2,6 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import SettingsIcon from '@mui/icons-material/Settings';
 import "./style.scss";
 
-
 export function Navbar() {
   return (
     <div className="navbar">

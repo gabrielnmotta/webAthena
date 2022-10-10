@@ -9,6 +9,7 @@ import { signOut } from "firebase/auth";
 import { useCallback } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase/firebaseConfig";
+import Logo from '../../assets/Logo/ZeusAgro.jpeg'
 import "./sidebar.scss";
 
 export function Sidebar() {
@@ -21,6 +22,10 @@ export function Sidebar() {
 
   return (
     <div className="sidebar">
+
+      <div className="top">
+                <img src={Logo} alt="logo zeus" className="logo"/>
+            </div>
       <div className="center">
         <ul>
           <div className="main">
