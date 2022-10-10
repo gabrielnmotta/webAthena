@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { IUsuarios } from '../../interface/IUsuarios';
+import { IUsuarios } from '../../interfaces/IUsuarios';
 import "./style.scss";
 
 export const Usuarios = () => {
@@ -9,14 +9,14 @@ export const Usuarios = () => {
 
     const [users, setUsers] = useState<IUsuarios[]>([]);
     const excluir = (usuarioExcluir: IUsuarios) => {
-        axios.delete(`http://localhost:3000/users/${usuarioExcluir.id}`)
+        axios.delete(`http://localhost:7010/users/${usuarioExcluir.id}`)
         .then(() => {
             const usuariosAtualizados = users.filter(usuario => usuario.id !== usuarioExcluir.id);
             setUsers(usuariosAtualizados);
         })
     }
     useEffect(() => {
-        axios.get<IUsuarios[]>("http://localhost:3000/users")
+        axios.get<IUsuarios[]>("http://localhost:7010/users")
         .then(resposta => setUsers(resposta.data))
     }, [setUsers]);
 

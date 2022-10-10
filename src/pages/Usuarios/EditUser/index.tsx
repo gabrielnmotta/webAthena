@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
-import { IUsuarios } from "../../../interface/IUsuarios";
+import { IUsuarios } from "../../../interfaces/IUsuarios";
 
 export const Edit = () => {
     const [displayName, setDisplayName] = useState("");
@@ -10,14 +10,14 @@ export const Edit = () => {
     const { id } = useParams<{ id: string }>();
     const [user, setUser] = useState<IUsuarios>();
     const save = () => {
-        axios.put(`http://localhost:3000/users/${id}`, {
+        axios.put(`http://localhost:7010/users/${id}`, {
             displayName,
             email,
             phone,
         }); 
     }
     useEffect(() => {
-        axios.get<IUsuarios>(`http://localhost:3000/users/${id}`)
+        axios.get<IUsuarios>(`http://localhost:7010/users/${id}`)
         .then(resposta => setUser(resposta.data))
     }
     , [id, setUser]);

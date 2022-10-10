@@ -3,7 +3,6 @@ import IBlocks from "../../interfaces/IBlocks";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
 import Blockx from "./Cardset";
 import { Button } from "@mui/material";
 
