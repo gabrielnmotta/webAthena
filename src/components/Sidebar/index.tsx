@@ -51,7 +51,7 @@ export function Sidebar() {
             <li>
 
               <GroupIcon className="icon" />
-              <NavLink  to="/users">Users</NavLink>
+              <NavLink  to="/user">Users</NavLink>
             </li>
           </div>
 
