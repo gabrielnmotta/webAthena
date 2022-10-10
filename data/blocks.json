@@ -1983,20 +1983,6 @@
   ],
   "users": [
     {
-      "id": "BE3UKgFjvqfTnGJSUxCW8TeFGke2",
-      "email": "demo.athena@zeusagro.com",
-      "phone": "+5534000000003",
-      "displayName": "Demo Athena",
-      "photoURL": "https://www.grunge.com/img/gallery/the-mythology-of-athena-explained/intro-1629822652.webp"
-    },
-    {
-      "id": "BIii8ixZl4Uy1wPWkIu2r8CZGyw2",
-      "email": "giovana.campioto@zeusagrotech.com",
-      "phone": "+5534982489517",
-      "displayName": "Giovana Campioto",
-      "photoURL": "https://avatars.githubusercontent.com/u/49204498?v=4"
-    },
-    {
       "id": "KrUnZQqB7HgXYgfC6x5j4v8sTg63",
       "email": "tecnologia@zeusagrotech.com",
       "phone": "+5534940001180",
@@ -2039,11 +2025,22 @@
       "photoURL": "https://avatars.githubusercontent.com/u/61150315?v=4"
     },
     {
-      "id": "x2hJiXAiaTacDIuHseFG8QZMNg12",
+      "displayName": "Demo",
       "email": "demo.amg@zeusagro.com",
       "phone": "+5534000000002",
-      "displayName": "Demo Amaggi",
-      "photoURL": "https://media-exp1.licdn.com/dms/image/C4E0BAQEbx2D43qGenw/company-logo_200_200/0/1530720144520?e=2147483647&v=beta&t=q32C0YLvbe2HVsRRy4f9XVJT7sZ3mJsukTeQOIYWcTk"
+      "id": "x2hJiXAiaTacDIuHseFG8QZMNg12"
+    },
+    {
+      "displayName": "joaooo",
+      "email": "joao@gmail.com",
+      "phone": "4554185417",
+      "id": "BOhuKCT"
+    },
+    {
+      "displayName": "joaoaoa",
+      "email": "sadfa",
+      "phone": "sadafas",
+      "id": "ZOwQ1BV"
     }
   ]
 }
