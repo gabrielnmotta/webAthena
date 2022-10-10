@@ -1,4 +1,5 @@
 import { Cards } from "../../components/Cards";
+import { Forecast } from "../../components/Forecast";
 import './home.scss'
 
 export function Home() {
@@ -6,6 +7,7 @@ export function Home() {
     <div className="inside">
       
           <Cards />
+          <Forecast />
           
     </div>
   );

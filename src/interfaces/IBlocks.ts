@@ -12,4 +12,4 @@ export default interface IBlocks {
       rain: any;
       relativeHumidity: any;
     };
-  }
+}
