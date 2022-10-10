@@ -31,7 +31,7 @@ export function Sidebar() {
           <div className="main">
             <li>
               <DashboardIcon className="icon" />
-              <span role="button">Dashboard</span>
+              <NavLink to="/home" role="button">Dashboard</NavLink>
             </li>
 
             <li>
@@ -41,7 +41,7 @@ export function Sidebar() {
 
             <li>
               <MapIcon className="icon" />
-              <span role="button">Maps</span>
+              <NavLink to="/maps" role="button">Maps</NavLink>
             </li>
           </div>
 

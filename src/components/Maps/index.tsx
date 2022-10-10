@@ -1,11 +1,9 @@
-import "./maps.scss";
-import IBlocks from "../../interfaces/IBlocks";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
-import Mapset from "./Mapset";
 import { Button } from "@mui/material";
+import axios from "axios";
+import { useCallback, useEffect, useState } from "react";
+import IBlocks from "../../interfaces/IBlocks";
+import "./maps.scss";
+import Mapset from "./Mapset";
 
 export function Maps() {
   const [blocks, setBlocks] = useState<IBlocks[]>([]);

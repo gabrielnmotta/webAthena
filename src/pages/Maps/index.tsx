@@ -1,6 +1,6 @@
-import { Maps } from "../../components/Maps";
 
-export function Home() {
+
+export function Maps() {
     return (
       <div className="inside">
         <Maps />
