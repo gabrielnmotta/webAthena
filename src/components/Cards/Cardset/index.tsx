@@ -8,11 +8,11 @@ export default function Blockx(props: IBlocks) {
         <span onClick={() => test(props.blockId)} className="title">
           {props.name}
         </span>
-        <span>Wind Speed: {props.data.windSpeed}</span>
-        <span>Solar Irradiation: {props.data.solarIrradiation}</span>
-        <span>Temperature: {props.data.temperature}</span>
-        <span>Rain: {props.data.rain}</span>
-        <span>Relative Humidity: {props.data.relativeHumidity}</span>
+        <span>Wind Speed: {Math.round(props.data.windSpeed)}</span>
+        <span>Solar Irradiation: {Math.round(props.data.solarIrradiation)}%</span>
+        <span>Temperature: {Math.round(props.data.temperature)}°C</span>
+        <span>Rain: {Math.round(props.data.rain)}mm</span>
+        <span>Relative Humidity: {Math.round(props.data.relativeHumidity)}%</span>
       </>
     </div>
   );

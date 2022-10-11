@@ -1,5 +1,6 @@
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SettingsIcon from '@mui/icons-material/Settings';
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import "./style.scss";
 
 export function Navbar() {
@@ -16,6 +17,9 @@ export function Navbar() {
           </div>
           <div className="item">
             <SettingsIcon className="icon"/>
+          </div>
+          <div className="item">
+            <AccountCircleRoundedIcon className="icon"/>
           </div>
         </div>
       </div>

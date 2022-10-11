@@ -1,17 +1,90 @@
-import axios from "axios";
-import { useEffect } from "react";
+import moment from "moment";
 import { IData } from "../../interfaces/IForecast";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Mousewheel, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useState } from "react";
 
- export function Forecast() {
+interface Props {
+  forecast: IData;
+}
 
-    const x = useEffect(() => {
-        axios.get<IData>("http://localhost:7010/forecast")
-        console.log(x)
-    },[])
+export function Forecast({ forecast }: Props) {
+  const [showSwipe, setShowSwipe] = useState(true);
+
+  const handleShowSwipe = () => {
+    setShowSwipe(!showSwipe);
+};
 
   return (
-    <div>
-
-    </div>
-  )
+    <Swiper
+      direction="vertical"
+      autoplay={{ delay: 4000 }}
+      slidesPerView={1}
+      spaceBetween={30}
+      mousewheel
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Mousewheel, Pagination, Autoplay]}
+      className="mySwiper"
+    >
+      {showSwipe ? (
+        <div>
+          {forecast.past.map((item) => {
+            <p>10 dias passados</p>;
+            return (
+              <SwiperSlide className="car__bottom-left" key={item.date}>
+                <button
+                  aria-hidden
+                  type="button"
+                  className="button__container "
+                  onClick={() => handleShowSwipe()}
+                >
+                  Ver Previsão
+                </button>
+                <div className="container">
+                  <p className="date">{moment(item.date).format("DD/MM")}</p>
+                  <p>{Math.round(item.rain)} mm</p>
+                  <p>{item.relativeHumidity.toPrecision(2)} %</p>
+                  <p>{Math.round(item.solarIrradiation)}mj/m²</p>
+                  <p>{item.temperatureAverage.toPrecision(2)}</p>
+                  <p>{item.temperatureMax.toPrecision(2)}</p>
+                  <p>{item.temperatureMin.toPrecision(2)}</p>
+                  <p>{item.windSpeed.toPrecision(2)} m/s</p>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </div>
+      ) : (
+        <div>
+          {forecast.forecast.map((item) => {
+            <p>10 dias futuros</p>;
+            return (
+              <SwiperSlide className="car__bottom-left" key={item.date}>
+                <button
+                  aria-hidden
+                  type="button"
+                  className="button__container "
+                  onClick={() => handleShowSwipe()}
+                >
+                  Ver Dados Coletados
+                </button>
+                <div className="container">
+                  <p className="date">{moment(item.date).format("DD/MM")}</p>
+                  <p>{item.rainPrediction}</p>
+                  <p>{Math.round(item.rain)} mm</p>
+                  <p>{Math.round(item.rainProbability)}%</p>
+                  <p>{item.temperatureMax.toPrecision(2)}</p>
+                  <p>{item.temperatureMin.toPrecision(2)}</p>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </div>
+      )}
+    </Swiper>
+  );
 }
