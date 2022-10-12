@@ -1,7 +1,14 @@
 import IBlocks from "../../../interfaces/IBlocks";
+import { IData } from "../../../interfaces/IForecast";
+import { useRequestData } from "../../../services/api/apiFake";
+import { Forecast } from "../../Forecast";
 import "./cardset.scss";
 
 export default function Blockx(props: IBlocks) {
+
+  const {data} = useRequestData<IData[]>('/forecast')
+  console.log(data)
+
   return (
     <div className="left">
       <>
@@ -14,6 +21,13 @@ export default function Blockx(props: IBlocks) {
         <span>Rain: {Math.round(props.data.rain)}mm</span>
         <span>Relative Humidity: {Math.round(props.data.relativeHumidity)}%</span>
       </>
+
+      {/* <div>
+            {data &&
+              data.map((e) => {
+                return <Forecast forecast={e} key={e.blockId} />;
+              })}
+          </div> */}
     </div>
   );
 }

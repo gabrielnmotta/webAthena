@@ -5,10 +5,14 @@ import axios from "axios";
 import { useCallback } from "react";
 import Blockx from "./Cardset";
 import { Button } from "@mui/material";
+import { Forecast } from "../Forecast";
+import { IData } from "../../interfaces/IForecast";
+import { useRequestData } from "../../services/api/apiFake";
 
 export function Cards() {
   const [blocks, setBlocks] = useState<IBlocks[]>([]);
   const [bloco, setBloco] = useState<IBlocks[]>([]);
+  const { data } = useRequestData<IData[]>("/forecast");
 
   useEffect(() => {
     axios
@@ -30,7 +34,6 @@ export function Cards() {
     [blocks]
   );
 
-
   const back = useCallback(() => {
     bloco.forEach((item) => {
       const fvck = blocks.filter((linhagem) => {
@@ -47,7 +50,9 @@ export function Cards() {
   return (
     <div className="preview">
       <div className="button">
-        <Button variant="contained" onClick={back}>Voltar</Button>
+        <Button variant="contained" onClick={back}>
+          Voltar
+        </Button>
       </div>
       {bloco.map((blocks) => (
         <button
@@ -61,16 +66,11 @@ export function Cards() {
             blockParent={""}
             leafParent={false}
             date={0}
-            data={{
-              windSpeed: blocks.data.windSpeed,
-              solarIrradiation: blocks.data.solarIrradiation,
-              temperature: blocks.data.temperature,
-              rain: blocks.data.rain,
-              relativeHumidity: blocks.data.relativeHumidity,
-            }}
+            data={blocks.data}
           />
         </button>
       ))}
+          
     </div>
   );
 }

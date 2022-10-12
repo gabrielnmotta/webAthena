@@ -1,5 +1,6 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { useEffect, useState } from "react";
+import { IData } from "../../interfaces/IForecast";
 
 
 const apiFake = axios.create({
@@ -10,7 +11,7 @@ export function useRequestData<T = unknown>(
   url: string,
   options?: AxiosRequestConfig
 ) {
-  const [data, setData] = useState<T | null>(null); // <T | null> is a generic type that can be any type or null
+  const [data, setData] = useState<IData[]>([]); // <T | null> is a generic type that can be any type or null
   const [isFetching, setIsFetching] = useState(true); // loading state for the request
   const [error, setError] = useState<Error | null>(null); // error state for the request
 
