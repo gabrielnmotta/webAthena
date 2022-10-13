@@ -55,22 +55,23 @@ export function Cards() {
         </Button>
       </div>
       {bloco.map((blocks) => (
-        <button
-          onClick={() => test(blocks.blockId, blocks.name)}
-          className="title"
-        >
-          <Blockx
-            blockId={blocks.blockId}
-            name={blocks.name}
-            abrv={""}
-            blockParent={""}
-            leafParent={false}
-            date={0}
-            data={blocks.data}
-          />
-        </button>
+        <>
+          <button
+            onClick={() => test(blocks.blockId, blocks.name)}
+            className="title"
+          >
+            <Blockx
+              blockId={blocks.blockId}
+              name={blocks.name}
+              abrv={""}
+              blockParent={""}
+              leafParent={false}
+              date={0}
+              data={blocks.data}
+            />
+          </button>
+        </>
       ))}
-          
     </div>
   );
 }
