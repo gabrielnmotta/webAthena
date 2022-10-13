@@ -39,7 +39,7 @@ export function Forecast({ forecast }: Props) {
                 <button
                   aria-hidden
                   type="button"
-                  className="button "
+                  className="buttonp "
                   onClick={() => handleShowSwipe()}
                 >
                   next 10 days
@@ -49,9 +49,9 @@ export function Forecast({ forecast }: Props) {
                   <p>{Math.round(item.rain)} mm</p>
                   <p>{item.relativeHumidity.toPrecision(2)} %</p>
                   <p>{Math.round(item.solarIrradiation)}mj/m²</p>
-                  <p>{item.temperatureAverage.toPrecision(2)}</p>
-                  <p>{item.temperatureMax.toPrecision(2)}</p>
-                  <p>{item.temperatureMin.toPrecision(2)}</p>
+                  <p>{item.temperatureAverage.toPrecision(2)}°C</p>
+                  <p>{item.temperatureMax.toPrecision(2)}°C</p>
+                  <p>{item.temperatureMin.toPrecision(2)}°C</p>
                   <p>{item.windSpeed.toPrecision(2)} m/s</p>
                 </div>
               </SwiperSlide>
@@ -66,7 +66,7 @@ export function Forecast({ forecast }: Props) {
                 <button
                   aria-hidden
                   type="button"
-                  className="button "
+                  className="buttonp "
                   onClick={() => handleShowSwipe()}
                 >
                   last 10 days
@@ -76,8 +76,8 @@ export function Forecast({ forecast }: Props) {
                   <p>{item.rainPrediction}</p>
                   <p>{Math.round(item.rain)} mm</p>
                   <p>{Math.round(item.rainProbability)}%</p>
-                  <p>{item.temperatureMax.toPrecision(2)}</p>
-                  <p>{item.temperatureMin.toPrecision(2)}</p>
+                  <p>{item.temperatureMax.toPrecision(2)}°C</p>
+                  <p>{item.temperatureMin.toPrecision(2)}°C</p>
                 </div>
               </SwiperSlide>
             );

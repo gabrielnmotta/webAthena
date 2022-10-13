@@ -37,8 +37,6 @@
     background: red;
   }
   .date {
-    background: red;
-    color: #fff;
     padding: 0.1rem 1rem;
     font-size: 1rem;
     font-weight: 600;
@@ -49,16 +47,21 @@
     flex-direction: column;
     justify-content: center;
     width: calc(100% - 2rem);
+    height: 12rem;
+    flex: 1;
+    padding: 10px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 10px;
+    margin: 1.5rem;
   }
-  .button {
+  .buttonp {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 13rem;
     color: #fff;
     background: red;
-    padding: 1rem 1rem;
   }
+
   @media screen and (max-width: 1366px) {
     .swiper {
       width: 23rem;
@@ -66,4 +69,10 @@
       margin-bottom: 2rem;
       margin-right: 9rem;
     }
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    
   }
