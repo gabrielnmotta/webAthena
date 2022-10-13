@@ -10,6 +10,7 @@ import { Edit } from "../pages/Usuarios/EditUser";
 import { NewUser } from "../pages/Usuarios/newUser";
 import store from "../store";
 import PrivateRoute from "./privateRouter";
+import { Profile } from '../pages/Profile/index';
 
 
 function Router() {
@@ -28,6 +29,10 @@ function Router() {
               <Route path="/user" element={<Usuarios />} />
               <Route path="/user/:id" element={<Edit />} />
               <Route path="/user/newUser/" element={<NewUser />} />
+            </Route>
+
+            <Route path="/profile" element={<Dash />} >
+              <Route path="/profile" element={<Profile />} />
             </Route>
 
             <Route path="/home" element={<Dash />} >

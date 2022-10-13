@@ -1,7 +1,7 @@
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import SettingsIcon from '@mui/icons-material/Settings';
-import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import "./style.scss";
+import { NavLink } from "react-router-dom";
 
 export function Navbar() {
   return (
@@ -13,17 +13,15 @@ export function Navbar() {
 
         <div className="items">
           <div className="item">
-            <NotificationsIcon className="icon"/>
+            <NotificationsIcon className="icon" />
           </div>
           <div className="item">
-            <SettingsIcon className="icon"/>
-          </div>
-          <div className="item">
-            <AccountCircleRoundedIcon className="icon"/>
+            <NavLink to="/profile">
+              <AccountCircleRoundedIcon className="icon" />
+            </NavLink>
           </div>
         </div>
       </div>
     </div>
   );
 }
-

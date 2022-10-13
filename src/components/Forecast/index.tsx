@@ -1,4 +1,5 @@
 import moment from "moment";
+import "./forecast.scss";
 import { IData } from "../../interfaces/IForecast";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -15,14 +16,14 @@ export function Forecast({ forecast }: Props) {
 
   const handleShowSwipe = () => {
     setShowSwipe(!showSwipe);
-};
+  };
 
   return (
     <Swiper
       direction="vertical"
       autoplay={{ delay: 4000 }}
       slidesPerView={1}
-      spaceBetween={30}
+      spaceBetween={25}
       mousewheel
       pagination={{
         clickable: true,
@@ -33,18 +34,17 @@ export function Forecast({ forecast }: Props) {
       {showSwipe ? (
         <div>
           {forecast.past.map((item) => {
-            <p>10 dias passados</p>;
             return (
               <SwiperSlide className="car__bottom-left" key={item.date}>
                 <button
                   aria-hidden
                   type="button"
-                  className="button__container "
+                  className="button "
                   onClick={() => handleShowSwipe()}
                 >
-                  Ver Previsão
+                  next 10 days
                 </button>
-                <div className="container">
+                <div className="prev">
                   <p className="date">{moment(item.date).format("DD/MM")}</p>
                   <p>{Math.round(item.rain)} mm</p>
                   <p>{item.relativeHumidity.toPrecision(2)} %</p>
@@ -61,18 +61,17 @@ export function Forecast({ forecast }: Props) {
       ) : (
         <div>
           {forecast.forecast.map((item) => {
-            <p>10 dias futuros</p>;
             return (
               <SwiperSlide className="car__bottom-left" key={item.date}>
                 <button
                   aria-hidden
                   type="button"
-                  className="button__container "
+                  className="button "
                   onClick={() => handleShowSwipe()}
                 >
-                  Ver Dados Coletados
+                  last 10 days
                 </button>
-                <div className="container">
+                <div className="prev">
                   <p className="date">{moment(item.date).format("DD/MM")}</p>
                   <p>{item.rainPrediction}</p>
                   <p>{Math.round(item.rain)} mm</p>

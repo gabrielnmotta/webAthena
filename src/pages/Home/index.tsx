@@ -2,6 +2,7 @@ import './home.scss'
 import { Forecast } from '../../components/Forecast/index';
 import { useRequestData } from "../../services/api/apiFake";
 import { IData } from "../../interfaces/IForecast";
+import { Cards } from '../../components/Cards/index';
 
 
 
@@ -11,12 +12,8 @@ export function Home() {
 
   return (
     <div className="inside">
-      {
-        data && data.map((e) => {
-        return(
-        <Forecast forecast={e} key={e.blockId}/>
-        
-  );})}
+     
+  <Cards/>
       
     </div>
   );
