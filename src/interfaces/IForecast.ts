@@ -1,5 +1,7 @@
 export interface IForecast {
-    date: string;
+    blockId: string;
+        name: string;
+        date: string;
         temperatureMin: number;
         temperatureMax: number;
         rain: number;
@@ -8,7 +10,9 @@ export interface IForecast {
 }
 
 export interface IPast {
-    date: string;
+    blockId: string;
+        name: string;
+        date: string;
         temperatureAverage: number;
         temperatureMin: number;
         temperatureMax: number;
@@ -19,7 +23,9 @@ export interface IPast {
 }
 
 export interface IPresent {
-    date: string;
+    blockId: string;
+        name: string;
+        date: string;
         temperatureAverage: number;
         temperatureMin: number;
         temperatureMax: number;

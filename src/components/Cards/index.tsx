@@ -8,6 +8,7 @@ import { Button } from "@mui/material";
 import { Forecast } from "../Forecast";
 import { IData } from "../../interfaces/IForecast";
 import { useRequestData } from "../../services/api/apiFake";
+import React from "react";
 
 export function Cards() {
   const [blocks, setBlocks] = useState<IBlocks[]>([]);
@@ -47,31 +48,70 @@ export function Cards() {
     });
   }, [bloco, blocks]);
 
+  const [show, setShow] = useState(true);
+  const handleShow = () => {
+    setShow(!show);
+  };
+
   return (
-    <div className="preview">
-      <div className="button">
-        <Button variant="contained" onClick={back}>
+    <div>
+      <div className="preview">
+        <button className="button" onClick={back}>
           Voltar
-        </Button>
+        </button>
       </div>
-      {bloco.map((blocks) => (
-        <>
+      {show ? (
+        <div >
           <button
-            onClick={() => test(blocks.blockId, blocks.name)}
-            className="title"
+            aria-hidden
+            type="button"
+            className="button "
+            onClick={() => handleShow()}
           >
-            <Blockx
-              blockId={blocks.blockId}
-              name={blocks.name}
-              abrv={""}
-              blockParent={""}
-              leafParent={false}
-              date={0}
-              data={blocks.data}
-            />
+            previsões
           </button>
-        </>
-      ))}
+
+          {bloco.map((blocks) => (
+            <div >
+              <button
+                onClick={() => test(blocks.blockId, blocks.name)}
+                className="title"
+              >
+                <Blockx
+                  blockId={blocks.blockId}
+                  name={blocks.name}
+                  abrv={""}
+                  blockParent={""}
+                  leafParent={false}
+                  date={0}
+                  data={blocks.data}
+                />
+              </button>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div>
+          <button
+            aria-hidden
+            type="button"
+            className="button "
+            onClick={() => handleShow()}
+          >
+            presente
+          </button>
+          {bloco.map((blocks) => (
+            <div>
+              {data &&
+                data
+                  .filter((item) => item.blockId === blocks.blockId)
+                  .map((e) => {
+                    return <Forecast forecast={e} key={e.blockId} />;
+                  })}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
