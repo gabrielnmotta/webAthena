@@ -7,7 +7,6 @@ import "./cardset.scss";
 
 export default function Blockx(props: IBlocks) {
   const { data } = useRequestData<IData[]>("/forecast");
-  console.log(data);
 
   const [show, setShow] = useState(true);
   const handleShow = () => {
