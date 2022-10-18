@@ -5,9 +5,12 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@hookform/resolvers": "^2.9.9",
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.8",
     "@mui/styled-engine-sc": "^5.10.6",
+    "@radix-ui/react-dialog": "^1.0.2",
+    "@radix-ui/react-popover": "1.0.2",
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -16,6 +19,7 @@
     "@types/node": "^16.11.63",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@types/styled-components": "^5.1.26",
     "axios": "^0.27.2",
     "firebase": "^9.10.0",
     "json": "^11.0.0",
@@ -23,8 +27,11 @@
     "leaflet": "^1.9.1",
     "moment": "^2.29.4",
     "node-sass": "^7.0.3",
+    "phosphor-react": "^1.4.1",
+    "radix": "^0.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.37.0",
     "react-leaflet": "^4.1.0",
     "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.1",
@@ -36,7 +43,8 @@
     "styled-components": "^5.3.6",
     "swiper": "^8.4.3",
     "typescript": "^4.8.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zod": "^3.19.1"
   },
   "scripts": {
     "start": "react-scripts start",

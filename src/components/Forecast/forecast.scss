@@ -1,83 +1,35 @@
-.swiper {
-    position: relative;
-    width: 24rem;
-    height: 16rem;
-    background-color: var(--primary-color);
-    margin-bottom: 2rem;
-  }
-  
-  .swiper-slide {
-    position: relative;
-    width: 13rem;
-    margin-right: 5rem;
-    height: 16rem;
-    overflow: hidden;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    text-align: center;
-    line-height: 20px;
-    font-size: 12px;
-    color: #000;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.2);
-  }
-  
-  .swiper-pagination-bullet-active {
-    color: #fff;
-    background: red;
-  }
+  .swiper {
+      position: relative;
+      width: 20rem;
+      height: 16rem;
+      margin-bottom: 2rem;
+    }
+
+
+    .containerx{
+      display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% - 3rem);
+        height: 12rem;
+        flex: 1;
+        padding: 10px;
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        border-radius: 10px;
+        margin: 1.5rem;
+    }
+    
   .date {
     padding: 0.1rem 1rem;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 1rem;
   }
-  .prev {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: calc(100% - 2rem);
-    height: 12rem;
-    flex: 1;
-    padding: 10px;
-    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
-    border-radius: 10px;
-    margin: 1.5rem;
-  }
-  .prev h1 h2{
-    background-color: #000;
-    font-size: 1rem;
-  }
   
   .buttonp {
-    display: flex;
-    align-items: center;
     color: #fff;
     background: red;
   }
 
-  @media screen and (max-width: 1366px) {
-    .swiper {
-      width: 23rem;
-      height: 16rem;
-      margin-bottom: 2rem;
-      margin-right: 9rem;
-    }
-  }
-
-  .left {
-    display: flex;
-    flex-direction: column;
-    
-  }
