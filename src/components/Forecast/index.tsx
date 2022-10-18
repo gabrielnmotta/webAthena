@@ -36,27 +36,28 @@ export function Forecast({ forecast }: Props) {
           {forecast.past.map((item) => {
             return (
               <SwiperSlide className="car__bottom-left" key={item.blockId}>
-                <button
-                  aria-hidden
-                  type="button"
-                  className="buttonp "
-                  onClick={() => handleShowSwipe()}
-                >
-                  next 10 days
-                </button>
-                <div className="prev">
-                  
-                  <p className="date">{moment(item.date).format("DD/MM")}</p>
-                  <h1>{item.blockId}</h1>
-                  <h2>{item.name}</h2>
-                  <p>{Math.round(item.rain)} mm</p>
-                  <p>{item.relativeHumidity.toPrecision(2)} %</p>
-                  <p>{Math.round(item.solarIrradiation)}mj/m²</p>
-                  <p>{item.temperatureAverage.toPrecision(2)}°C</p>
-                  <p>{item.blockId}</p>
-                  <p>{item.temperatureMax.toPrecision(2)}°C</p>
-                  <p>{item.temperatureMin.toPrecision(2)}°C</p>
-                  <p>{item.windSpeed.toPrecision(2)} m/s</p>
+                <div className="containerx">
+                  <button
+                    aria-hidden
+                    type="button"
+                    className="buttonp "
+                    onClick={() => handleShowSwipe()}
+                  >
+                    next 10 days
+                  </button>
+                  <div className="prev">
+                    <p className="date">{moment(item.date).format("DD/MM")}</p>
+                    <h1>{item.blockId}</h1>
+                    <h2>{item.name}</h2>
+                    <p>{Math.round(item.rain)} mm</p>
+                    <p>{item.relativeHumidity.toPrecision(2)} %</p>
+                    <p>{Math.round(item.solarIrradiation)}mj/m²</p>
+                    <p>{item.temperatureAverage.toPrecision(2)}°C</p>
+                    <p>{item.blockId}</p>
+                    <p>{item.temperatureMax.toPrecision(2)}°C</p>
+                    <p>{item.temperatureMin.toPrecision(2)}°C</p>
+                    <p>{item.windSpeed.toPrecision(2)} m/s</p>
+                  </div>
                 </div>
               </SwiperSlide>
             );
@@ -67,23 +68,25 @@ export function Forecast({ forecast }: Props) {
           {forecast.forecast.map((item) => {
             return (
               <SwiperSlide className="car__bottom-left" key={item.blockId}>
-                <button
-                  aria-hidden
-                  type="button"
-                  className="buttonp "
-                  onClick={() => handleShowSwipe()}
-                >
-                  last 10 days
-                </button>
-                <div className="prev">
-                  <h1>{item.blockId}</h1>
-                  <h2>{item.name}</h2>
-                  <p className="date">{moment(item.date).format("DD/MM")}</p>
-                  <p>{item.rainPrediction}</p>
-                  <p>{Math.round(item.rain)} mm</p>
-                  <p>{Math.round(item.rainProbability)}%</p>
-                  <p>{item.temperatureMax.toPrecision(2)}°C</p>
-                  <p>{item.temperatureMin.toPrecision(2)}°C</p>
+                <div className="containerx">
+                  <button
+                    aria-hidden
+                    type="button"
+                    className="buttonp "
+                    onClick={() => handleShowSwipe()}
+                  >
+                    last 10 days
+                  </button>
+                  <div className="prev">
+                    <h1>{item.blockId}</h1>
+                    <h2>{item.name}</h2>
+                    <p className="date">{moment(item.date).format("DD/MM")}</p>
+                    <p>{item.rainPrediction}</p>
+                    <p>{Math.round(item.rain)} mm</p>
+                    <p>{Math.round(item.rainProbability)}%</p>
+                    <p>{item.temperatureMax.toPrecision(2)}°C</p>
+                    <p>{item.temperatureMin.toPrecision(2)}°C</p>
+                  </div>
                 </div>
               </SwiperSlide>
             );

@@ -7,10 +7,12 @@ import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";
 import { Usuarios } from "../pages/Usuarios";
 import { Edit } from "../pages/Usuarios/EditUser";
-import { NewUser } from "../pages/Usuarios/newUser";
+
 import store from "../store";
 import PrivateRoute from "./privateRouter";
 import { Profile } from '../pages/Profile/index';
+import { NewUserModal } from '../pages/Usuarios/newModal/index';
+import { EditModal } from "../pages/Usuarios/editModal";
 
 
 function Router() {
@@ -27,8 +29,8 @@ function Router() {
             
             <Route path="/user" element={<Dash />} >
               <Route path="/user" element={<Usuarios />} />
-              <Route path="/user/:id" element={<Edit />} />
-              <Route path="/user/newUser/" element={<NewUser />} />
+              <Route path="/user/:id" element={<EditModal />} />
+              <Route path="/user" element={<NewUserModal />} />
             </Route>
 
             <Route path="/profile" element={<Dash />} >
