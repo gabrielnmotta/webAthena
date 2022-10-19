@@ -42,7 +42,7 @@ export function Sidebar() {
 
             <li>
               <BarChartIcon className="icon" />
-              <span role="button">Statistics</span>
+              <NavLink to="/statistics" role="button">Statistics</NavLink>
             </li>
 
             <li>
@@ -60,7 +60,7 @@ export function Sidebar() {
 
             <li>
               <SettingsIcon className="icon"/>
-              <span role="button">{t('Settings')}</span>
+              <span role="button">Settings</span>  
             </li>
             <li>
               <div className="icon">

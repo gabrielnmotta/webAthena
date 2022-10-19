@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Popover from '@mui/material/Popover';
-import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state'
+import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
 
 export function Navbar() {
 

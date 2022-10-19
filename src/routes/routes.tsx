@@ -13,7 +13,8 @@ import PrivateRoute from "./privateRouter";
 import { Profile } from '../pages/Profile/index';
 import { NewUserModal } from '../pages/Usuarios/newModal/index';
 import { EditModal } from "../pages/Usuarios/editModal";
-import { Map } from "../pages/Map";
+import { Statistics } from "../pages/Statistics";
+
 
 
 function Router() {
@@ -28,11 +29,14 @@ function Router() {
              <Route path="/maps" element={<Maps />} />
             </Route>
 
+            <Route path="/statistics" element={<Dash />} >
+             <Route path="/statistics" element={<Statistics />} />
+            </Route>
            
         
             <Route path="/user" element={<Dash />} >
               <Route path="/user" element={<Usuarios />} />
-              <Route path="/user/:id" element={<EditModal />} />
+              <Route path="/user/:id" element={<Edit />} />
               <Route path="/user" element={<NewUserModal />} />
             </Route>
 

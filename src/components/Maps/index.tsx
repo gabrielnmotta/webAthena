@@ -1,80 +1,27 @@
-import { Button } from "@mui/material";
-import axios from "axios";
-import { useCallback, useEffect, useState } from "react";
-import IBlocks from "../../interfaces/IBlocks";
-import "./maps.scss";
-import Mapset from "./Mapset";
+
+import "./maps.css";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 export function Maps() {
-  const [blocks, setBlocks] = useState<IBlocks[]>([]);
-  const [bloco, setBloco] = useState<IBlocks[]>([]);
-
-  useEffect(() => {
-    axios
-      .get<IBlocks[]>("http://localhost:7010/blocks")
-      .then((resposta) =>
-        setBlocks(resposta.data.filter((item) => item.blockId !== "0"))
-      );
-  }, []);
-
-  useEffect(() => {
-    setBloco(blocks.filter((blocks) => blocks.blockParent === "0"));
-  }, [blocks]);
-
-  const test = useCallback(
-    (blockID: string, name: string) => {
-      console.log(name);
-      setBloco(blocks.filter((blocks) => blocks.blockParent === blockID));
-    },
-    [blocks]
-  );
-
-  
-
-  const back = useCallback(() => {
-    bloco.forEach((item) => {
-      const fvck = blocks.filter((linhagem) => {
-        return item.blockParent === linhagem.blockId;
-      });
-      fvck.forEach((list) => {
-        setBloco(
-          blocks.filter((blocks) => list.blockParent === blocks.blockParent)
-        );
-      });
-    });
-  }, [bloco, blocks]);
 
   return (
-    <div className="preview">
-      <div className="button">
-        <button onClick={back}>Back</button>
-      </div>
-      <div>
+    <div className="featured">
 
-      {bloco.map((blocks) => (
-        <button
-          onClick={() => test(blocks.blockId, blocks.name)}
-          className="title"
+        <MapContainer
+          center={[-17.843621,-50.422762]}
+          zoom={13}
+          scrollWheelZoom={false}
         >
-          <Mapset
-            blockId={blocks.blockId}
-            name={blocks.name}
-            abrv={""}
-            blockParent={""}
-            leafParent={false}
-            date={0}
-            data={{
-              windSpeed: blocks.data.windSpeed,
-              solarIrradiation: blocks.data.solarIrradiation,
-              temperature: blocks.data.temperature,
-              rain: blocks.data.rain,
-              relativeHumidity: blocks.data.relativeHumidity,
-            }}
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-        </button>
-      ))}
-      </div>
-      
+          <Marker position={[-17.843621,-50.422762]}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </MapContainer> 
     </div>
   );
 }

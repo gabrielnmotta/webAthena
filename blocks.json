@@ -5623,25 +5623,10 @@
   ],
   "users": [
     {
-      "id": "BE3UKgFjvqfTnGJSUxCW8TeFGke2",
-      "email": "demo.athena@zeusagro.com",
-      "phone": "+5534000000003",
-      "displayName": "Demo Athena",
-      "photoURL": "https://www.grunge.com/img/gallery/the-mythology-of-athena-explained/intro-1629822652.webp"
-    },
-    {
-      "id": "BIii8ixZl4Uy1wPWkIu2r8CZGyw2",
-      "email": "giovana.campioto@zeusagrotech.com",
-      "phone": "+5534982489517",
-      "displayName": "Giovana Campioto",
-      "photoURL": "https://avatars.githubusercontent.com/u/49204498?v=4"
-    },
-    {
-      "id": "KrUnZQqB7HgXYgfC6x5j4v8sTg63",
+      "displayName": "zeeeus",
       "email": "tecnologia@zeusagrotech.com",
       "phone": "+5534940001180",
-      "displayName": "Zeus",
-      "photoURL": "https://scontent.fudi1-2.fna.fbcdn.net/v/t1.6435-9/38454722_400463327145137_4625888994238922752_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=aikV_yDbQDwAX8TnjLh&_nc_ht=scontent.fudi1-2.fna&oh=00_AT8CTHd7Ej_-9tMxnjlS7cdooKChLQr1yJ-kPo9Uyt9qlQ&oe=630039FB"
+      "id": "KrUnZQqB7HgXYgfC6x5j4v8sTg63"
     },
     {
       "id": "LQ8cxvqvYJOmp2KCLBSxs1wbbaz1",
@@ -5683,6 +5668,12 @@
       "email": "gustavo.silva@zeusagrotech.com",
       "phone": "+5534992472752",
       "id": "ss5fc06eFfhXyQqU5c75XP86QB72"
+    },
+    {
+      "displayName": "asdasd",
+      "email": "asdasd",
+      "phone": "asdasda",
+      "id": "uU8O1yY"
     }
   ]
 }
