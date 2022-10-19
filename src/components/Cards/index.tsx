@@ -73,7 +73,7 @@ export function Cards() {
           </button>
 
           {bloco.map((blocks) => (
-            <div >
+            <div className="block">
               <button
                 onClick={() => test(blocks.blockId, blocks.name)}
                 className="title"

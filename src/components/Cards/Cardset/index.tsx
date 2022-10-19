@@ -1,7 +1,6 @@
 import { useState } from "react";
 import IBlocks from "../../../interfaces/IBlocks";
 import "./cardset.scss";
-import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 
 export default function Blockx(props: IBlocks) {
   

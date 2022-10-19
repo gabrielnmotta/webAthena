@@ -53,14 +53,16 @@ export function Forecast({ forecast }: Props) {
                     next 10 days
                   </Button>
                   <div className="prev">
+
                     <p className="date">{moment(item.date).format("DD/MM")}</p>
-                    <p><ThunderstormIcon/>{Math.round(item.rain)} mm</p>
-                    <p><ThunderstormIcon/>{item.relativeHumidity.toPrecision(2)} %</p>
-                    <p><WbSunnyIcon/>{Math.round(item.solarIrradiation)}mj/m²</p>
-                    <p><ThermostatIcon/>{item.temperatureAverage.toPrecision(2)}°C</p>
-                    <p><ThermostatIcon/>{item.temperatureMax.toPrecision(2)}°C</p>
-                    <p><ThermostatIcon/>{item.temperatureMin.toPrecision(2)}°C</p>
-                    <p><AirIcon/>{item.windSpeed.toPrecision(2)} m/s</p>
+                    <p>Rain: {Math.round(item.rain)} mm</p>
+                    <p>Relative Humidity:   {item.relativeHumidity.toPrecision(2)} %</p>
+                    <p>Solar Irradiation:   {Math.round(item.solarIrradiation)}mj/m²</p>
+                    <p>Temperature Average:  {item.temperatureAverage.toPrecision(2)}°C</p>
+                    <p>Temperature Max:  {item.temperatureMax.toPrecision(2)}°C</p>
+                    <p>Temperature Min:  {item.temperatureMin.toPrecision(2)}°C</p>
+                    <p>Wind Speed: {item.windSpeed.toPrecision(2)} m/s </p>
+                    
                   </div>
                 </div>
               </SwiperSlide>
@@ -84,14 +86,12 @@ export function Forecast({ forecast }: Props) {
                     last 10 days
                   </Button>
                   <div className="prev">
-                    <h1>{item.blockId}</h1>
-                    <h2>{item.name}</h2>
                     <p className="date">{moment(item.date).format("DD/MM")}</p>
-                    <p>{item.rainPrediction}</p>
-                    <p>{Math.round(item.rain)} mm</p>
-                    <p>{Math.round(item.rainProbability)}%</p>
-                    <p>{item.temperatureMax.toPrecision(2)}°C</p>
-                    <p>{item.temperatureMin.toPrecision(2)}°C</p>
+                    <p>Rain Prediction: {item.rainPrediction}</p>
+                    <p>Rain: {Math.round(item.rain)} mm</p>
+                    <p>Rain Probability: {Math.round(item.rainProbability)}%</p>
+                    <p>Max Temperature: {item.temperatureMax.toPrecision(2)}°C</p>
+                    <p>Min Temperature: {item.temperatureMin.toPrecision(2)}°C</p>
                   </div>
                 </div>
               </SwiperSlide>

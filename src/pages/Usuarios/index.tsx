@@ -12,12 +12,11 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
-import * as Dialog from '@radix-ui/react-dialog'
-import { NewUserModal } from './newModal/index';
-
+import Button from "@mui/material/Button";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
+import * as Dialog from "@radix-ui/react-dialog";
+import { NewUserModal } from "./newModal/index";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -59,12 +58,11 @@ export const Usuarios = () => {
 
   return (
     <div className="cont">
-
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
             <TableRow>
-              <StyledTableCell align="center">ID</StyledTableCell>  
+              <StyledTableCell align="center">ID</StyledTableCell>
               <StyledTableCell align="center">Name</StyledTableCell>
               <StyledTableCell align="center">Email</StyledTableCell>
               <StyledTableCell align="center">Telephone</StyledTableCell>
@@ -73,29 +71,49 @@ export const Usuarios = () => {
               <StyledTableCell align="center">
                 <Dialog.Root>
                   <Dialog.Trigger asChild>
-                    <Button variant="contained" color="success">Create</Button>
+                    <Button variant="contained" color="success">
+                      Create
+                    </Button>
                   </Dialog.Trigger>
-                  <NewUserModal/>
+                  <NewUserModal />
                 </Dialog.Root>
               </StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-          {users.map(usuario => (
-            <StyledTableRow key={usuario.id}>
-              <StyledTableCell component="th" scope="row" align="center">
-                {usuario.id}
-              </StyledTableCell>
-              <StyledTableCell align="center">{usuario.displayName}</StyledTableCell>
-              <StyledTableCell align="center">{usuario.email}</StyledTableCell>
-              <StyledTableCell align="center">{usuario.phone}</StyledTableCell>
-              <StyledTableCell align="center"><Button variant="outlined" startIcon={<EditIcon />}><NavLink to={`/user/${usuario.id}`}>Editar</NavLink></Button></StyledTableCell>
-              <StyledTableCell align="center"><Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => excluir(usuario)} color="error">Delete</Button></StyledTableCell>
-              <StyledTableCell align="right"></StyledTableCell>
-            </StyledTableRow>
-          ))}
-        </TableBody>
-
+            {users.map((usuario) => (
+              <StyledTableRow key={usuario.id}>
+                <StyledTableCell component="th" scope="row" align="center">
+                  {usuario.id}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  {usuario.displayName}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  {usuario.email}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  {usuario.phone}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <Button variant="outlined" startIcon={<EditIcon />}>
+                    <NavLink to={`/user/${usuario.id}`}>Edit</NavLink>
+                  </Button>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <Button
+                    variant="outlined"
+                    startIcon={<DeleteIcon />}
+                    onClick={() => excluir(usuario)}
+                    color="error"
+                  >
+                    Delete
+                  </Button>
+                </StyledTableCell>
+                <StyledTableCell align="right"></StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
         </Table>
       </TableContainer>
     </div>
