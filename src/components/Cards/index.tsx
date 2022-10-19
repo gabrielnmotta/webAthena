@@ -39,6 +39,7 @@ export function Cards() {
     bloco.forEach((item) => {
       const fvck = blocks.filter((linhagem) => {
         return item.blockParent === linhagem.blockId;
+        
       });
       fvck.forEach((list) => {
         setBloco(
@@ -54,21 +55,21 @@ export function Cards() {
   };
 
   return (
-    <div>
-      <div className="preview">
+    <div className="previewx">
+      <div >
         <button className="button" onClick={back}>
-          Voltar
+          Back
         </button>
       </div>
       {show ? (
-        <div >
+        <div className="forecast">
           <button
             aria-hidden
             type="button"
             className="button "
             onClick={() => handleShow()}
           >
-            previsões
+            Forecast
           </button>
 
           {bloco.map((blocks) => (
@@ -91,14 +92,14 @@ export function Cards() {
           ))}
         </div>
       ) : (
-        <div>
+        <div className="forecast">
           <button
             aria-hidden
             type="button"
-            className="button "
+            className="button"
             onClick={() => handleShow()}
           >
-            presente
+            Present
           </button>
           {bloco.map((blocks) => (
             <div>

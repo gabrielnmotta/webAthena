@@ -47,8 +47,10 @@ export function Maps() {
   return (
     <div className="preview">
       <div className="button">
-        <Button variant="contained" onClick={back}>Voltar</Button>
+        <button onClick={back}>Back</button>
       </div>
+      <div>
+
       {bloco.map((blocks) => (
         <button
           onClick={() => test(blocks.blockId, blocks.name)}
@@ -71,6 +73,7 @@ export function Maps() {
           />
         </button>
       ))}
+      </div>
       
     </div>
   );

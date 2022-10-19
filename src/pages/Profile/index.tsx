@@ -1,3 +1,4 @@
+import { Button } from '@mui/material'
 import React from 'react'
 import './profile.scss'
 
@@ -50,13 +51,10 @@ export function Profile() {
                 <label>Photo</label>
                 <input type="file" placeholder="choose file" />
               </div>
-
-              <div className="profimg">
-                <button type="button" className="btn">
-                  Submit
-                </button>
-              </div>
             </div>
+            <div className="profimg">
+                <Button variant="contained" className="btn">Submit</Button>
+              </div>
           </form>
         </div>
       </div>

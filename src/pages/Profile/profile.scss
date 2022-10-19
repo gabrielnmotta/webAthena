@@ -57,10 +57,9 @@
     outline: none;
   }
   
-  
   .profimg {
     display: flex;
-    flex-direction: row !important;
+    justify-content: center;
     column-gap: 2.7rem;
   }
   

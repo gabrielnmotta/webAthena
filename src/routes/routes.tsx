@@ -13,6 +13,7 @@ import PrivateRoute from "./privateRouter";
 import { Profile } from '../pages/Profile/index';
 import { NewUserModal } from '../pages/Usuarios/newModal/index';
 import { EditModal } from "../pages/Usuarios/editModal";
+import { Map } from "../pages/Map";
 
 
 function Router() {
@@ -26,7 +27,9 @@ function Router() {
             <Route path="/maps" element={<Dash />} >
              <Route path="/maps" element={<Maps />} />
             </Route>
-            
+
+           
+        
             <Route path="/user" element={<Dash />} >
               <Route path="/user" element={<Usuarios />} />
               <Route path="/user/:id" element={<EditModal />} />
