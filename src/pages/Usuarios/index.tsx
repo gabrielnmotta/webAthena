@@ -65,11 +65,11 @@ export const Usuarios = () => {
           <TableHead>
             <TableRow>
               <StyledTableCell align="center">ID</StyledTableCell>  
-              <StyledTableCell align="center">Nome</StyledTableCell>
+              <StyledTableCell align="center">Name</StyledTableCell>
               <StyledTableCell align="center">Email</StyledTableCell>
-              <StyledTableCell align="center">Telefone</StyledTableCell>
-              <StyledTableCell align="center">Editar</StyledTableCell>
-              <StyledTableCell align="center">Excluir</StyledTableCell>
+              <StyledTableCell align="center">Telephone</StyledTableCell>
+              <StyledTableCell align="center">Edit</StyledTableCell>
+              <StyledTableCell align="center">Delete</StyledTableCell>
               <StyledTableCell align="center">
                 <Dialog.Root>
                   <Dialog.Trigger asChild>
