@@ -10,17 +10,7 @@ export function Profile() {
         <div className="details__form">
           <h2 className="title">Profile</h2>
           <form>
-            <div className="form">
-              <div>
-                <label>City</label>
-                <input type="text" placeholder="Brasil" />
-              </div>
-
-              <div>
-                <label>Street</label>
-                <input type="text" placeholder="Rua municipios" />
-              </div>
-            </div>
+         
 
             <div className="form">
               <div>
@@ -31,18 +21,6 @@ export function Profile() {
               <div>
                 <label>Contact</label>
                 <input type="number" placeholder="+55 xxx 40028922" />
-              </div>
-            </div>
-
-            <div className="form">
-              <div>
-                <label>Birthday</label>
-                <input type="date" placeholder="dd/mm/yyyy" />
-              </div>
-
-              <div>
-                <label>Sex</label>
-                <input type="text" placeholder="Male" />
               </div>
             </div>
 

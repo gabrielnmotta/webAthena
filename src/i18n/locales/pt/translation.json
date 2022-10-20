@@ -1,0 +1,33 @@
+{
+    "translation":{
+        "Dashboard": "Tabela",
+        "Settings": "Configurações",
+        "Maps":"Mapas",
+        "Users":"Usuário",
+        "Logout":"Sair",
+        "Back":"Voltar",
+        "Forecast":"Previsão",
+        "Wind Speed":"Velocidade do Vento",
+        "Present":"Presente",
+        "Solar Irradiation":"Radiação Solar",
+        "Temperature":"Temperatura",
+        "Rain":"Chuva",
+        "Relative Humidity":"Umidade Relativa",
+        "Search":"Buscar",
+        "No Notifications.":"Sem notificações.",
+        "Next 10 days":"Próximos 10 dias",
+        "Last 10 days":"Últimos 10 dias",
+        "Temperature Average":"Média de Temperature",
+        "Temperature Max":"Temperatura Maxima",
+        "Temperature Min":"Temperatura Minima",
+        "Rain Prediction":"Previsão de chuva",
+        "Rain Probability":"Probabilidade de chuva",
+        "Name":"Nome",
+        "Tellphone":"Telefone",
+        "Edit":"Editar",
+        "Delete":"Deletar",
+        "Create":"Criar",
+        "Phone Number":"Número de telefone",
+        "Photo":"Foto"
+    }
+}

@@ -1,8 +1,20 @@
+.qwe{
+    display: flex;
+    height: 70px;
+    align-content: end;
+    z-index: 1;
+    position: fixed;
+    right: 0;
+    margin: 1rem;
+}
+
 .navbar {
     height: 70px;
+    width: 11rem;
+    border-radius: 100px;
     border-bottom: 0.5px solid rgb(231, 228, 228);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     font-size: 16px;
     color: #aaaaaa;
     background-color: #333;
@@ -12,30 +24,7 @@
         width: 100%;
         padding: 20px;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
 
-        .search {
-            display: flex;
-            align-items: center;
-            margin-left: 375px;
-            border-radius: 5px;
-            border: 1px solid rgb(254, 254, 254);
-            background-color: rgba(212, 207, 207, 0.659);
-            background: rgb(213, 213, 213);
-            padding-bottom: 20px;
-            padding: 10px;
-            width: 30%;
-
-            input {
-                border: none;
-                outline: none;
-                background: transparent;
-
-                &::placeholder {
-                    font-size: 12px;
-                }
-            }
         }
 
         .items {
@@ -60,5 +49,5 @@
             }
         }
     }
- }
+ 
 
