@@ -9,6 +9,7 @@ import { Forecast } from "../Forecast";
 import { IData } from "../../interfaces/IForecast";
 import { useRequestData } from "../../services/api/apiFake";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export function Cards() {
   const [blocks, setBlocks] = useState<IBlocks[]>([]);
@@ -54,11 +55,13 @@ export function Cards() {
     setShow(!show);
   };
 
+  const {t} = useTranslation();
+
   return (
     <div className="previewx">
       <div >
         <button className="button" onClick={back}>
-          Back
+        {t('Back')}
         </button>
       </div>
       {show ? (
@@ -69,7 +72,7 @@ export function Cards() {
             className="button "
             onClick={() => handleShow()}
           >
-            Forecast
+            {t('Forecast')}
           </button>
 
           {bloco.map((blocks) => (
@@ -99,7 +102,7 @@ export function Cards() {
             className="button"
             onClick={() => handleShow()}
           >
-            Present
+            {t('Present')}
           </button>
           {bloco.map((blocks) => (
             <div>

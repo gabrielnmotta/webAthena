@@ -37,35 +37,35 @@ export function Sidebar() {
           <div className="main">
             <li>
               <DashboardIcon className="icon" />
-              <NavLink to="/home" role="button">Dashboard</NavLink>
+              <NavLink to="/home" role="button">{t('Dashboard')}</NavLink>
             </li>
 
             <li>
               <BarChartIcon className="icon" />
-              <NavLink to="/statistics" role="button">Statistics</NavLink>
+              <NavLink to="/statistics" role="button">{t('Statistics')}</NavLink>
             </li>
 
             <li>
               <MapIcon className="icon" />
-              <NavLink to="/maps" role="button">Maps</NavLink>
+              <NavLink to="/maps" role="button">{t('Maps')}</NavLink>
             </li>
           </div>
 
           <div className="users">
             <li>
               <GroupIcon className="icon" />
-              <NavLink  to="/user">Users</NavLink>
+              <NavLink  to="/user">{t('Users')}</NavLink>
             </li>
           </div>
 
             <li>
               <SettingsIcon className="icon"/>
-              <span role="button">Settings</span>  
+              <span role="button">{t('Settings')}</span>  
             </li>
             <li>
               <div className="icon">
                 <LogoutIcon />
-                <span onClick={SignOut}role="button">Logout</span>
+                <span onClick={SignOut}role="button">{t('Logout')}</span>
               </div>
             </li>
           
