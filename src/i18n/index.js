@@ -1,7 +1,7 @@
 import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next'
-import PTBR from './locales/pt/pt-br.json'
-import ENUS from './locales/en/en-us.json'
+import PTBR from './locales/pt/translation.json'
+import ENUS from './locales/en/translation.json'
 
 const resources = {
     'pt-BR': PTBR,
