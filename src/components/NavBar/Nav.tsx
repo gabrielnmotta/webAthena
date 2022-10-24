@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Popover from "@mui/material/Popover";
 import PopupState, { bindTrigger, bindPopover } from "material-ui-popup-state";
+import { useTranslation } from "react-i18next";
 
 export function Navbar() {
   let navigate = useNavigate();
@@ -13,6 +14,7 @@ export function Navbar() {
     navigate("/profile");
   }
 
+  const {t} = useTranslation();
   return (
     <div className="qwe">
       <div className="navbar">
@@ -35,7 +37,7 @@ export function Navbar() {
                       horizontal: "center",
                     }}
                   >
-                    <Typography sx={{ p: 2 }}>No Notifications.</Typography>
+                    <Typography sx={{ p: 2 }}>{t('No Notifications')}.</Typography>
                   </Popover>
                 </div>
               )}

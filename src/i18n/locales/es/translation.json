@@ -1,0 +1,33 @@
+{
+    "translation":{
+        "Dashboard": "Dashboard",
+        "Settings": "Settings",
+        "Maps":"Maps",
+        "Users":"Users",
+        "Logout":"Logout",
+        "Back":"Back",
+        "Forecast":"Forecast",
+        "Wind Speed":"Wind Speed",
+        "Present":"Present",
+        "Solar Irradiation":"Solar Irradiation",
+        "Temperature":"Temperature",
+        "Rain":"Rain",
+        "Relative Humidity":"Relative Humidity",
+        "Search":"Search",
+        "No Notifications.":"No Notifications.",
+        "Next 10 days":"Next 10 days",
+        "Last 10 days":"Last 10 days",
+        "Temperature Average":"Temperature Average",
+        "Temperature Max":"Temperature Max",
+        "Temperature Min":"Temperature Min",
+        "Rain Prediction":"Rain Prediction",
+        "Rain Probability":"Rain Probability",
+        "Name":"Name",
+        "Tellphone":"Tellphone",
+        "Edit":"Edit",
+        "Delete":"Delete",
+        "Create":"Create",
+        "Phone Number":"Phone Number",
+        "Photo":"Photo"
+    }
+}
