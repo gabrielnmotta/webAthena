@@ -1,16 +1,19 @@
 .qwe{
     display: flex;
+    background-color: transparent;
     height: 70px;
+    width: 84%;
     align-content: end;
     z-index: 1;
+    border-radius: 8px;
     position: fixed;
-    right: 0;
     margin: 1rem;
+    filter: blur(0.5rem);
 }
 
 .navbar {
-    height: 70px;
-    width: 11rem;
+    height: 50px;
+    width: 14rem;
     border-radius: 100px;
     border-bottom: 0.5px solid rgb(231, 228, 228);
     display: flex;
@@ -18,8 +21,8 @@
     font-size: 16px;
     color: #aaaaaa;
     background-color: #333;
+    margin: 0.55rem;
     
-
     .wrapper {
         width: 100%;
         padding: 20px;

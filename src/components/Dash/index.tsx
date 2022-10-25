@@ -9,7 +9,7 @@ export function Dash() {
       <Sidebar />
 
       <div className="dashContainer">
-        <Navbar />
+        
         <Outlet />
       </div>
     </div>
